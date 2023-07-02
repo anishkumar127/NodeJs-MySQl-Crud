@@ -16,6 +16,15 @@ const sequelize = new Sequelize(db_Name, db_User, db_Password, {
     dialect: "mysql"
 });
 
+// Add error handling for the database connection
+sequelize.authenticate()
+    .then(() => {
+        console.log('Connection has been established successfully.');
+    })
+    .catch((error) => {
+        console.error('Unable to connect to the database:', error);
+    });
+
 // Create Object of database for export.
 const db = {
     Sequelize,
