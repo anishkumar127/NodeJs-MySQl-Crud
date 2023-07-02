@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 // Routes
 app.use("/api/customers", customerRouter);
 
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     res.send("running ok!")
 })
 // Server Listing.
@@ -26,3 +26,5 @@ app.listen(PORT, () => {
     console.log(`app is running at port ${PORT}`);
 })
 
+
+export default app;

@@ -8,6 +8,8 @@
     "outDir": "dist",
   },
   "include": [
-    "src/**/*"
-, "src/models"  ]
+    "src/**/*",
+    "./api/*.ts",
+    "src/models"
+  ]
 }
